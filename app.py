@@ -1,9 +1,10 @@
 import plotly.express as px
 import streamlit as st
 df=px.data.gapminder()
+fechas=df['year'].unique().tolist()
 with st.sidebar:
     st.write('Selecciona el Año')
-    year=st.selectbox('Year',options=[2007,2003,2001])
+    year=st.selectbox('Year',options=fechas)
 
 mask=df['year']==year
 df_filter=df[mask]

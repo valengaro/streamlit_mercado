@@ -12,3 +12,4 @@ fig=px.scatter(data_frame=df,
            log_x=True
            )
 st.plotly_chart(fig)
+# haciendo pruebas

@@ -4,7 +4,7 @@ df=px.data.gapminder()
 fechas=df['year'].unique().tolist()
 with st.sidebar:
     st.write('Selecciona el Año')
-    year=st.selectbox('Year',options=fechas)
+    year=st.selectbox('Year',fechas)
 
 mask=df['year']==year
 df_filter=df[mask]
